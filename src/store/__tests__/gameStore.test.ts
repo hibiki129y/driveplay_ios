@@ -1,5 +1,4 @@
 import { useGameStore } from '../gameStore';
-import { MMKV } from 'react-native-mmkv';
 
 jest.mock('react-native-mmkv', () => ({
   MMKV: jest.fn().mockImplementation(() => ({

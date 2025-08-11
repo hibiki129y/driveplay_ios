@@ -6,7 +6,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { SafeButton } from '../components/SafeButton';
 import { useGameStore } from '../store/gameStore';
 import { calculateGameRecommendations, getMoodLabel, getStyleLabel, getCognitionLabel } from '../utils/recommendation';
-import { Mood, Style, Cognition, RecommendationCriteria } from '../types';
+import { Mood, Style, Cognition, RecommendationCriteria, GameMeta } from '../types';
 import { RootStackParamList } from '../navigation/AppNavigator';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Recommendation'>;
@@ -18,7 +18,7 @@ export const RecommendationScreen: React.FC = () => {
   const [mood, setMood] = useState<Mood>('party');
   const [style, setStyle] = useState<Style>('coop');
   const [cognition, setCognition] = useState<Cognition>('medium');
-  const [recommendations, setRecommendations] = useState<any[]>([]);
+  const [recommendations, setRecommendations] = useState<GameMeta[]>([]);
   const [showResults, setShowResults] = useState(false);
 
   const handleGetRecommendations = () => {
