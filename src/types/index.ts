@@ -54,6 +54,6 @@ export interface TalkDiceState {
 export interface RoomState {
   id: string;
   code: string;
-  gameState: any;
+  gameState: InsiderState | ItoState | TalkDiceState | null;
   participants: string[];
 }

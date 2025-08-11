@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { MMKV } from 'react-native-mmkv';
-import { Player, RecommendationCriteria, GameMeta, InsiderState, ItoState, TalkDiceState } from '../types';
+import { Player, RecommendationCriteria, InsiderState, ItoState, TalkDiceState } from '../types';
 
 const storage = new MMKV();
 
@@ -48,7 +48,7 @@ interface GameStore {
 
 export const useGameStore = create<GameStore>()(
   persist(
-    (set, get) => ({
+    (set, _get) => ({
       players: [],
       playerCount: 2,
       currentGame: null,
@@ -59,7 +59,7 @@ export const useGameStore = create<GameStore>()(
       roomCode: null,
       isMultiDevice: false,
       
-      setPlayers: (players) => set({ players }),
+      setPlayers: (players) => set({ players, playerCount: players.length }),
       setPlayerCount: (count) => set({ playerCount: count }),
       
       setCurrentGame: (gameId) => set({ currentGame: gameId }),

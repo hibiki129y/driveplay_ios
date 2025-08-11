@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "DrivePlay",
-    "slug": "DrivePlay",
+    "owner": "hibiki1209",
+    "slug": "driveplay-ios",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,7 +14,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hibiki129y.driveplay"
     },
     "android": {
       "adaptiveIcon": {

@@ -36,7 +36,7 @@ export const RoomScreen: React.FC = () => {
           },
         ]
       );
-    } catch (error) {
+    } catch {
       Alert.alert('エラー', 'ルームの作成に失敗しました。');
     } finally {
       setIsCreating(false);
@@ -63,7 +63,7 @@ export const RoomScreen: React.FC = () => {
           },
         ]
       );
-    } catch (error) {
+    } catch {
       Alert.alert('エラー', 'ルームへの参加に失敗しました。');
     }
   };

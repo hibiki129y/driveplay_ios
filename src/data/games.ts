@@ -14,7 +14,7 @@ export const GAMES: GameMeta[] = [
   {
     id: 'ito',
     name: 'Ito（簡易版）',
-    minPlayers: 3,
+    minPlayers: 2,
     maxPlayers: 6,
     mood: ['relax', 'serious'],
     style: 'coop',
@@ -24,7 +24,7 @@ export const GAMES: GameMeta[] = [
   {
     id: 'insider',
     name: 'Insider（内通者）',
-    minPlayers: 4,
+    minPlayers: 2,
     maxPlayers: 6,
     mood: ['party', 'serious'],
     style: 'competitive',
