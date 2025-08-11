@@ -7,14 +7,12 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
       "bundleIdentifier": "com.hibiki129y.driveplay",
       "supportsTablet": true,
@@ -23,11 +21,14 @@
       }
     },
     "android": {
-      "package": "com.hibiki129y.driveplay",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
@@ -40,11 +41,10 @@
         {
           "ios": {
             "useFrameworks": "static",
-            "deploymentTarget": "13.4"
+            "deploymentTarget": "15.1"
           }
         }
       ]
-    ],
-    "newArchEnabled": true
+    ]
   }
 }
