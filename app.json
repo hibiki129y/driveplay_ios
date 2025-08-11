@@ -13,7 +13,7 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
       "bundleIdentifier": "com.hibiki129y.driveplay"
     },
     "android": {
@@ -30,7 +30,7 @@
       "eas": {
         "projectId": "d138d41c-df6c-4742-bacc-f3f8fbbafdc1"
       }
-    }
-   "owner": "hibiki1209"   
+    },
+    "owner": "hibiki1209"
   }
 }
