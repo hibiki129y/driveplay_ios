@@ -63,7 +63,7 @@ export const InsiderScreen: React.FC = () => {
     const shuffledPlayers = [...players].sort(() => Math.random() - 0.5);
     const master = shuffledPlayers[0];
     const insider = shuffledPlayers[1];
-    const citizens = shuffledPlayers.slice(2);
+    // const _citizens = shuffledPlayers.slice(2);
 
     const playersWithRoles = shuffledPlayers.map(player => ({
       ...player,
@@ -153,7 +153,7 @@ export const InsiderScreen: React.FC = () => {
     }
 
     const accusedPlayer = gameState.players.find(p => p.id === mostVoted);
-    const insider = gameState.players.find(p => p.role === 'INSIDER');
+    // const _insider = gameState.players.find(p => p.role === 'INSIDER');
     
     let winner: 'citizens' | 'insider';
     if (accusedPlayer?.role === 'INSIDER') {

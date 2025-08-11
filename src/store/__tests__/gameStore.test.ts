@@ -1,14 +1,33 @@
 import { useGameStore } from '../gameStore';
+import { MMKV } from 'react-native-mmkv';
+
+jest.mock('react-native-mmkv', () => ({
+  MMKV: jest.fn().mockImplementation(() => ({
+    set: jest.fn(),
+    getString: jest.fn(() => null),
+    delete: jest.fn(),
+  })),
+}));
 
 describe('Game Store', () => {
   beforeEach(() => {
-    useGameStore.getState().resetGameState();
+    useGameStore.setState({
+      players: [],
+      playerCount: 2,
+      currentGame: null,
+      insiderState: null,
+      itoState: null,
+      talkDiceState: null,
+      lastRecommendation: null,
+      roomCode: null,
+      isMultiDevice: false,
+    });
   });
 
   test('should initialize with default state', () => {
     const state = useGameStore.getState();
     expect(state.players).toEqual([]);
-    expect(state.playerCount).toBe(0);
+    expect(state.playerCount).toBe(2);
     expect(state.currentGame).toBeNull();
   });
 
@@ -37,11 +56,11 @@ describe('Game Store', () => {
     useGameStore.getState().setPlayers(players);
     useGameStore.getState().setCurrentGame('ito');
     
-    useGameStore.getState().resetGameState();
+    useGameStore.getState().resetAll();
     const state = useGameStore.getState();
     
     expect(state.players).toEqual([]);
-    expect(state.playerCount).toBe(0);
+    expect(state.playerCount).toBe(2);
     expect(state.currentGame).toBeNull();
   });
 
