@@ -6,7 +6,6 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { SafeButton } from '../../components/SafeButton';
 import { SafetyWarning } from '../../components/SafetyWarning';
 import { useGameStore } from '../../store/gameStore';
-import { ItoState } from '../../types';
 import { RootStackParamList } from '../../navigation/AppNavigator';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Ito'>;
