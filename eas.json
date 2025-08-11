@@ -13,11 +13,7 @@
         "simulator": true
       }
     },
-    "production": {
-      "ios": {
-        "bundleIdentifier": "com.driveplay.ios"
-      }
-    }
+    "production": {}
   },
   "submit": {
     "production": {}
