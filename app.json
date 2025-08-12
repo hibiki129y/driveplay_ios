@@ -16,9 +16,7 @@
     "ios": {
       "bundleIdentifier": "com.hibiki129y.driveplay",
       "supportsTablet": true,
-      "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
-      }
+      "infoPlist": { "ITSAppUsesNonExemptEncryption": false }
     },
     "android": {
       "adaptiveIcon": {
@@ -27,21 +25,21 @@
       },
       "edgeToEdgeEnabled": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "d138d41c-df6c-4742-bacc-f3f8fbbafdc1"
-      }
-    },
+    "web": { "favicon": "./assets/favicon.png" },
+    "extra": { "eas": { "projectId": "d138d41c-df6c-4742-bacc-f3f8fbbafdc1" } },
     "plugins": [
       [
         "expo-build-properties",
         {
           "ios": {
             "useFrameworks": "static",
-            "deploymentTarget": "15.1"
+            "deploymentTarget": "15.1",
+            "extraPods": [
+              {
+                "name": "ReactAppDependencyProvider",
+                "path": "../node_modules/react-native"
+              }
+            ]
           }
         }
       ]
