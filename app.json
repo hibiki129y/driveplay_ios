@@ -45,7 +45,7 @@
             "extraPods": [
               {
                 "name": "ReactAppDependencyProvider",
-                "path": "../node_modules/react-native"
+                "path": "../node_modules/react-native/ReactAppDependencyProvider.podspec.json"
               }
             ]
           }
