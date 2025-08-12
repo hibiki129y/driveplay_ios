@@ -4,7 +4,23 @@
     "appVersionSource": "remote"
   },
   "build": {
-    "preview": { "ios": { "simulator": true } },
-    "production": { "ios": { "simulator": false } }
+    "preview": {
+      "env": {
+        "EXPO_POD_INSTALL_ARGUMENTS": "--repo-update"
+      },
+      "ios": {
+        "simulator": true,
+        "image": "latest",
+        "cocoapods": "1.15.2"
+      },
+      "cache": { "key": "pods-repo-update-20250812" }
+    },
+    "production": {
+      "ios": {
+        "simulator": false,
+        "image": "latest",
+        "cocoapods": "1.15.2"
+      }
+    }
   }
 }
